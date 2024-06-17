@@ -24,7 +24,7 @@ class Scraper:
         # options.add_argument('--headless')
         chromeDriverPath = '/usr/bin/chromedriver'
         options.add_experimental_option("detach", True)
-        options.add_argument("--log-level=3", "--silent") # Using this to supress the errors so only fatal ones show, to clean up the output.
+        options.add_argument("--log-level=3S --silent") # Using this to supress the errors so only fatal ones show, to clean up the output.
         chromeService = ChromeService()
         self.driver = webdriver.Chrome(service=chromeService, options=options)
         return self.driver
