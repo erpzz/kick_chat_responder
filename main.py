@@ -16,8 +16,10 @@ def main():
     # scraper.get_user_names(chat_choice, duration)
     scraper.get_messages(duration, chat_choice)
     scraper.driver.quit()
-    scraper.printMessages()
-    #responder.artificialChatter()
+    #scraper.printMessages()
+    #print(scraper.last_message)
+    
+    responder.artificialChatter(scraper.chat_messages)
     
 if __name__ == "__main__":
     main()

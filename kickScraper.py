@@ -120,7 +120,8 @@ class Scraper:
                 for chat_message in message_selectors:
                     chat_message = chat_message.get_text().strip().lower()
                     self.chat_messages.append(chat_message)
-
+                last_message = self.chat_messages[-1]
+                
 
         except requests.exceptions.RequestException as e:
             print(f"An error occurred during the request: {type(e).__name__}: {e}")
